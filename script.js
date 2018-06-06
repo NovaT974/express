@@ -26,7 +26,7 @@ $(function () {
       success: function (data) {
   
         for (var i = 0; i < data.length; i++) {
-          $('#liste').append('<li class="li">Personnage : ' + data[i].name.first + '<br/> ' + data[i].name.last + '<br/>  ' + data[i]._id + '<br/>  ' + data[i].index + '</li>');
+          $('#liste').append('<li class="liste_personne">Personnage : ' + data[i].name.first + '<br/> ' + data[i].name.last + '<br/>  ' + data[i]._id + '<br/>  ' + data[i].index + '</li>');
         }
       },
   
@@ -40,3 +40,8 @@ $(function () {
   //
 });
 
+$(function(){
+  $('#btn-2').click(function () {
+    $('.li').hide();
+  });
+});
